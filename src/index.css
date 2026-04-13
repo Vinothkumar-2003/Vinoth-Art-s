@@ -1,0 +1,134 @@
+:root {
+  --primary: #FF6B00;
+  --primary-dark: #e05a00;
+  --secondary: #1A1A2E;
+  --accent: #FFD700;
+  --light-bg: #f8f9fa;
+  --card-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+h1, h2, h3, .display-font {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary) !important;
+  letter-spacing: 2px;
+}
+.navbar { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.nav-link { font-weight: 500; transition: color 0.2s; }
+.nav-link:hover, .nav-link.active { color: var(--primary) !important; }
+.whatsapp-btn {
+  background: #25D366 !important;
+  color: white !important;
+  border: none;
+  border-radius: 25px;
+  padding: 6px 18px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+.whatsapp-btn:hover { background: #1da851 !important; transform: scale(1.05); }
+
+/* Hero */
+.hero-section {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B00' fill-opacity='0.05'%3E%3Crect x='36' y='36' width='12' height='12'/%3E%3Crect x='12' y='12' width='12' height='12'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+}
+.hero-title { font-size: clamp(3rem, 8vw, 7rem); color: #fff; line-height: 0.95; }
+.hero-title span { color: var(--primary); }
+.hero-subtitle { color: rgba(255,255,255,0.75); font-size: 1.1rem; }
+.hero-cta { background: var(--primary); color: white; border: none; border-radius: 30px; padding: 12px 32px; font-size: 1rem; font-weight: 600; transition: all 0.3s; }
+.hero-cta:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,0,0.4); }
+.hero-badge { background: var(--accent); color: #222; padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 1rem; }
+
+/* Service Cards */
+.service-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.service-card:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(0,0,0,0.18); }
+.service-card .card-img-overlay-custom {
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 40%, transparent);
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem;
+}
+.service-icon { font-size: 3rem; }
+
+/* Size Configurator */
+.configurator-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  border: 2px solid #f0f0f0;
+}
+.size-preset {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #fff;
+}
+.size-preset:hover, .size-preset.active { border-color: var(--primary); background: rgba(255,107,0,0.06); color: var(--primary); }
+.price-display {
+  background: linear-gradient(135deg, var(--secondary), #0F3460);
+  color: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+.price-amount { font-size: 2.5rem; color: var(--accent); font-family: 'Bebas Neue', sans-serif; }
+.custom-range::-webkit-slider-thumb { background: var(--primary); }
+
+/* Order form */
+.order-section { background: var(--light-bg); }
+
+/* Footer */
+footer { background: var(--secondary); color: rgba(255,255,255,0.8); }
+footer a { color: rgba(255,255,255,0.65); text-decoration: none; }
+footer a:hover { color: var(--primary); }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.7s ease forwards; }
+.fade-up-delay { animation: fadeUp 0.7s ease 0.2s forwards; opacity: 0; }
+.fade-up-delay2 { animation: fadeUp 0.7s ease 0.4s forwards; opacity: 0; }
+
+/* WhatsApp float */
+.whatsapp-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+  background: #25D366; color: white;
+  width: 58px; height: 58px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+  text-decoration: none; transition: transform 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.1); color: white; }
