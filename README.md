@@ -33,9 +33,9 @@ banner-shop/
 
 ## ⚙️ How to Change WhatsApp Number
 
-Search for `919876543210` across all files and replace with your number:
+Search for `916381217533` across all files and replace with your number:
 - Format: Country code + number (no + or spaces)
-- Example: India +91 98765 43210 → `919876543210`
+- Example: India +91 6381217533 → `6381217533`
 
 Files to update:
 - `src/components/Navbar.jsx`
